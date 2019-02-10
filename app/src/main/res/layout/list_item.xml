@@ -16,35 +16,52 @@
         tools:src="@mipmap/ic_launcher"
         />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/text_layout"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:paddingLeft="16dp"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/first_text_view"
-            tools:text="hello"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:layout_weight="1"
-            android:gravity="bottom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingLeft="16dp"
+            android:layout_height="match_parent">
 
-        <TextView
-            tools:text="welcome"
-            android:textColor="#ffffff"
-            android:textSize="18sp"
-            android:layout_weight="1"
+            <TextView
+                android:id="@+id/first_text_view"
+                tools:text="hello"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-            android:id="@+id/second_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                tools:text="welcome"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:layout_weight="1"
 
-    </LinearLayout>
+                android:id="@+id/second_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/baseline_play_arrow_white_24" />
+
+    </RelativeLayout>
 
 </LinearLayout>

@@ -6,17 +6,24 @@ public class Word {
     private String mBaseWord;
     private String mTranslatedWord;
     private int mImageResourceId;
+    private int mAudioResourceId;
 
-    public Word(String translatedWord, String baseWord) {
+    public Word(String translatedWord, String baseWord, int audioResourceId) {
         mBaseWord = baseWord;
         mTranslatedWord = translatedWord;
         mImageResourceId = NO_IMAGE;
+        mAudioResourceId = audioResourceId;
     }
 
-    public Word(String translatedWord, String baseWord, int imageResourceId) {
+    public Word(String translatedWord, String baseWord, int imageResourceId, int audioResourceId) {
         mBaseWord = baseWord;
         mTranslatedWord = translatedWord;
         mImageResourceId = imageResourceId;
+        mAudioResourceId = audioResourceId;
+    }
+
+    public int getAudioResourceId() {
+        return mAudioResourceId;
     }
 
     public boolean hasImage() {
@@ -33,5 +40,15 @@ public class Word {
 
     public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mBaseWord='" + mBaseWord + '\'' +
+                ", mTranslatedWord='" + mTranslatedWord + '\'' +
+                ", mImageResourceId=" + mImageResourceId +
+                ", mAudioResourceId=" + mAudioResourceId +
+                '}';
     }
 }
